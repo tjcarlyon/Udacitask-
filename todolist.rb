@@ -1,35 +1,35 @@
 class TodoList
+  attr_reader :title, :items
 
-	attr_reader :title, :items
-     # Initialize todo list with a title and no items
-     def initialize(list_title)
-        @title = list_title
-        @items = Array.new # Starts empty! No Items yet!
-     end
-
-    # Creates a new Item and adds it to the array of Items
-     def add_item(new_item, due_date)
-        item = Item.new(new_item, due_date)
-        @items.push(item)
-    end
-    
-    
-    #removes item from array based on the list number shown in print_list
-    def remove_item(num) 
-        @items.delete_at(num-1)
-    end
-     
-
-    #marks item as complete
-    def complete(num) #marks item as complete
-        @items[num-1].complete_item
+    # creating a list w title
+    def initialize(list_title)
+       @title = list_title
+       @items = Array.new # Starts empty! No Items yet!
     end
 
-    #updates the title of the list
-    def update_title(new_title) #updates the title of the list
-    @title = new_title
+    # renaming list title
+    def rename_title(new_title)
+      @title = new_title
     end
 
+    # adding items
+    def add_item(new_item)
+       item = Item.new(new_item)
+       @items.push(item)
+    end
+
+    # deleting items
+    def remove_item(index)
+      @items.delete_at(index)
+    end
+
+    # print
+    def print_list
+      
+        end
+      
+
+    end
 end
 
 
@@ -38,17 +38,24 @@ end
 class Item
     # methods and stuff go here
 
-     attr_reader :description, :completed_status, :due_date
+     attr_reader :description, :completed_status
 
      # Initialize item with a description and marked as
      # not complete
-     def initialize(item_description, due_date)
+     def initialize(item_description)
         @description = item_description
         @completed_status = false
-        @due_date = due_date
+        
      end
 
+
+    #returns a boolean
      def completed? 
-        @completed_status 
+        #Ternary operator expressions
+        return @completed_status? "yes" : "no"
      end
+ 
+    
+
 end
+   
