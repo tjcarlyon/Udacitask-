@@ -1,10 +1,22 @@
+#class User
+    #attr_reader :username
+    #def initialize(username)
+        #@username = username
+    #end
+#end
+
+
+
 class TodoList
+    #add user to attr_reader
   attr_reader :title, :items
 
     # creating a list w title
+    #add user to argument)
     def initialize(list_title)
        @title = list_title
        @items = Array.new # Starts empty! No Items yet!
+       #@user = user
     end
 
     # renaming list title
@@ -26,6 +38,7 @@ class TodoList
     # print
     def print_list
         puts "*" * 25
+        #add user?
         puts "#{title}"
         puts "*" * 25
         #counter to add number before each item

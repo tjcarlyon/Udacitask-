@@ -1,7 +1,8 @@
 require_relative 'todolist.rb'
 
 # Creates a new todo list
-list = TodoList.new("Pre-Race Check List")
+list = TodoList.new("Pre-race Check List")
+#list = TodoList.new(User.new("Jeff"),"Pre-Race Check List")
 
 # Add four new items
 list.add_item("Sneakers")
@@ -33,3 +34,6 @@ list.rename_title("Do or die")
 
 # Print the list
 list.print_list
+
+#create new user list
+#sherpa_list = TodoList.new(User.new("Thomas"), "Do or die")
