@@ -1,0 +1,6 @@
+Added:
+1.Abilty to enter user name
+2.Set due date for items on list
+3.Ability to change item within list based on the index/description
+
+On a side note..the new layout of the webpage seems a little wonky at times when retracing steps and trying to review old info and lessons.  
